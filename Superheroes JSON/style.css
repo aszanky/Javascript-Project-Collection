@@ -1,0 +1,27 @@
+* {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+#output {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/4;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/4;
+}
+
+.contents {
+    text-align: center;
+}
