@@ -1,0 +1,32 @@
+[
+    {
+        "TITLE": "TV",
+        "DIV_NAME": "AV",
+        "MODELNAME": "UA82MU7000KPXD",
+        "CWHQTY": 3
+    },
+    {
+        "TITLE": "TV",
+        "DIV_NAME": "AV",
+        "MODELNAME": "UA82MU7000KPXT",
+        "CWHQTY": 2
+    },
+    {
+        "TITLE": "AUVI",
+        "DIV_NAME": "AV",
+        "MODELNAME": "UA82MU7000KPXS",
+        "CWHQTY": 2
+    },
+    {
+        "TITLE": "AUVI",
+        "DIV_NAME": "AV",
+        "MODELNAME": "UA82MU7000KPXH",
+        "CWHQTY": 2
+    },
+    {
+        "TITLE": "REF",
+        "DIV_NAME": "HA",
+        "MODELNAME": "UA82MU7000KPXH",
+        "CWHQTY": 2
+    }
+]
