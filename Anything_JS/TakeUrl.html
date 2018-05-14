@@ -1,0 +1,57 @@
+<!-- To get query params from URL -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL</title>
+
+    <script>
+        // function pageLoaded() {
+        //     var qAt = document.URL.indexOf("?");
+        //     var params = document.URL.substr(qAt+1);
+        //     // Use params as needed (parse, or pass along to flash swf):
+        //     alert(params);  // just echoing in this example.
+        // }
+        document.addEventListener('DOMContentLoaded', function() {
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+        
+            // let url = 'http://localhost:5000/page?namene=34343&status=failed';
+            let name = getParameterByName('namene');
+            let status = getParameterByName('status');
+            
+            if (status === 'success') {
+                document.getElementById('url').innerHTML = `Congratulation ${name}, Your request was ${status}`;
+            } else {
+                document.getElementById('url').innerHTML = `Oops Sorry ${name}, Your request was ${status}`;
+            }
+        }, false);
+    </script>
+
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2em;
+        }
+
+        #url {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="url"></p>
+    </div>
+</body>
+</html>
